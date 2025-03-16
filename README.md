@@ -167,6 +167,7 @@ For detailed API documentation, including sample requests and responses, refer t
 ## Deployment
 
 The application is deployed on **Render**. You can access it here:
+<!-- TODO: add real link on deployment -->
 [CookItEasy Live Demo](https://cookiteasy-app.onrender.com)
 
 ---
@@ -190,7 +191,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Author
 
-[Your Name](https://github.com/your-username)
+[Tomislav Dukez](https://github.com/tomdu3)
 
 ---
 
