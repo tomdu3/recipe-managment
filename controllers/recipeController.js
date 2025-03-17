@@ -37,21 +37,45 @@ const getRecipeById = async (req, res) => {
 // Create a new recipe
 const createRecipe = async (req, res) => {
     try {
-      const { name, ingredients, instructions } = req.body;
-      const recipe = new Recipe({ name, ingredients, instructions });
-      await recipe.save();
-      res.status(201).json({
-        message: 'Recipe created successfully',
-        recipe
-    });
+        const { name, ingredients, instructions } = req.body;
+        const recipe = new Recipe({ name, ingredients, instructions });
+        await recipe.save();
+        res.status(201).json({
+            message: 'Recipe created successfully',
+            recipe
+        });
     } catch (error) {
-      res.status(400).json({ message: error.message });
+        res.status(400).json({ message: error.message });
     }
-  };
-  
+};
+
+// Delete a recipe by ID
+const deleteRecipe = async (req, res) => {
+    try {
+        // Check if `id` is a valid ObjectId
+        const id = req.params.id;
+        if (!mongoose.Types.ObjectId.isValid(id)) {
+            return res.status(400).json({ message: 'Invalid recipe ID' });
+        }
+
+        // Find and delete the recipe by ID
+        const recipe = await Recipe.findByIdAndDelete(id);
+        if (!recipe) {
+            return res.status(404).json({ message: 'Recipe not found' });
+        }
+        res.status(200).json({
+            message: 'Recipe deleted successfully',
+            recipe
+        });
+    } catch (error) {
+        res.status(500).json({ message: error.message });
+    }
+};
+
 
 module.exports = {
     getAllRecipes,
     getRecipeById,
-    createRecipe
+    createRecipe,
+    deleteRecipe,
 };
