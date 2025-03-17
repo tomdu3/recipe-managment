@@ -40,7 +40,10 @@ const createRecipe = async (req, res) => {
       const { name, ingredients, instructions } = req.body;
       const recipe = new Recipe({ name, ingredients, instructions });
       await recipe.save();
-      res.status(201).json(...recipe, { message: 'Recipe created successfully' });
+      res.status(201).json({
+        message: 'Recipe created successfully',
+        recipe
+    });
     } catch (error) {
       res.status(400).json({ message: error.message });
     }
