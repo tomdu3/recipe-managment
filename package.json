@@ -1,0 +1,31 @@
+{
+  "name": "recipe-managment",
+  "version": "1.0.0",
+  "description": "![Node.js](https://img.shields.io/badge/Node.js-18.x-green) ![Express.js](https://img.shields.io/badge/Express.js-4.x-blue) ![Mongoose](https://img.shields.io/badge/Mongoose-7.x-orange) ![MongoDB](https://img.shields.io/badge/MongoDB-6.x-brightgreen) ![Postman](https://img.shields.io/badge/Postman-API%20Documentation-orange)",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tomdu3/recipe-managment.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/tomdu3/recipe-managment/issues"
+  },
+  "homepage": "https://github.com/tomdu3/recipe-managment#readme",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.12.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  }
+}
