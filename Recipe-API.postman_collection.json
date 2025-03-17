@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "2c26bbc4-5b93-479c-9ce5-2830281efd19",
 		"name": "Recipe-API",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "15625728"
 	},
 	"item": [
@@ -11,7 +11,17 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{API_URI}}/api/recipes/"
+				"url": {
+					"raw": "{{API_URI}}/api/recipes/",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"api",
+						"recipes",
+						""
+					]
+				}
 			},
 			"response": []
 		},
@@ -20,7 +30,18 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "{{API_URI}}/api/recipes/67d7ffa3bbb450b6da75ef75"
+				"url": {
+					"raw": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"api",
+						"recipes",
+						"67d8352bf82dd8d4532ac886"
+					]
+				},
+				"description": "### GET /api/recipes/{recipeId}\n\nThis endpoint retrieves a specific recipe identified by the recipeId.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n- `recipeId` (path parameter) : The unique identifier of the recipe.\n    \n\n#### Response\n\nThe response will be a JSON object with the following properties:\n\n- `_id` : The unique identifier of the recipe.\n    \n- `name` : The name of the recipe.\n    \n- `ingredients` : An array of ingredients required for the recipe.\n    \n- `instructions` : The cooking instructions for the recipe.\n    \n- `createdAt` : The timestamp when the recipe was created.\n    \n- `updatedAt` : The timestamp when the recipe was last updated.\n    \n- `__v` : Version key for handling updates.\n    \n\nExample:\n\n``` json\n{\n  \"_id\": \"string\",\n  \"name\": \"string\",\n  \"ingredients\": [\"string\"],\n  \"instructions\": \"string\",\n  \"createdAt\": \"string\",\n  \"updatedAt\": \"string\",\n  \"__v\": 0\n}\n\n ```"
 			},
 			"response": []
 		},
@@ -29,7 +50,17 @@
 			"request": {
 				"method": "DELETE",
 				"header": [],
-				"url": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886"
+				"url": {
+					"raw": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"api",
+						"recipes",
+						"67d8352bf82dd8d4532ac886"
+					]
+				}
 			},
 			"response": [
 				{
@@ -37,7 +68,17 @@
 					"originalRequest": {
 						"method": "DELETE",
 						"header": [],
-						"url": "{{API_URI}}/api/recipes/67d834bbf82dd8d4532ac881"
+						"url": {
+							"raw": "{{API_URI}}/api/recipes/67d834bbf82dd8d4532ac881",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"api",
+								"recipes",
+								"67d834bbf82dd8d4532ac881"
+							]
+						}
 					},
 					"status": "OK",
 					"code": 200,
@@ -119,7 +160,17 @@
 						}
 					}
 				},
-				"url": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886"
+				"url": {
+					"raw": "{{API_URI}}/api/recipes/67d7ffa3bbb450b6da75ef7d",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"api",
+						"recipes",
+						"67d7ffa3bbb450b6da75ef7d"
+					]
+				}
 			},
 			"response": []
 		},
@@ -137,7 +188,17 @@
 						}
 					}
 				},
-				"url": "{{API_URI}}/api/recipes/"
+				"url": {
+					"raw": "{{API_URI}}/api/recipes/",
+					"host": [
+						"{{API_URI}}"
+					],
+					"path": [
+						"api",
+						"recipes",
+						""
+					]
+				}
 			},
 			"response": []
 		}
