@@ -8,8 +8,8 @@
 
 CookItEasy is a **CRUD (Create, Read, Update, Delete)** application designed to manage recipes. It is built using **Node.js**, **Express.js**, and **Mongoose** for MongoDB integration. The application follows the **MVC (Model-View-Controller)** pattern and includes comprehensive API documentation using **Postman**.
 
+ ![Postman request API screenshot](./docs/postman-api.png)
 
----
 
 ## Features
 
@@ -20,8 +20,6 @@ CookItEasy is a **CRUD (Create, Read, Update, Delete)** application designed to 
 * **Delete Recipe**: Remove a recipe from the database by its ID.
 
 
----
-
 ## Tech Stack
 
 * **Backend**: Node.js, Express.js
@@ -30,11 +28,10 @@ CookItEasy is a **CRUD (Create, Read, Update, Delete)** application designed to 
 * **Deployment**: Render
 
 
----
-
 ## Installation
 
 Follow these steps to set up the project locally:
+
 
 
 1. **Clone the repository**:
@@ -65,8 +62,6 @@ Follow these steps to set up the project locally:
    The server will start at `http://localhost:3000`.
 
 
----
-
 ## API Endpoints
 
 ### Base URL
@@ -79,8 +74,6 @@ Follow these steps to set up the project locally:
 {{API_URI}}/api/recipes
 ```
 
-
----
 
 ### 1. **Get All Recipes**
 
@@ -134,8 +127,6 @@ Follow these steps to set up the project locally:
   ```
 
 
----
-
 ### 2. **Get Recipe by ID**
 
 * **Endpoint**: `GET /api/recipes/:recipeId`
@@ -167,8 +158,6 @@ Follow these steps to set up the project locally:
   ```
 
 
----
-
 ### 3. **Create Recipe**
 
 * **Endpoint**: `POST /api/recipes`
@@ -196,8 +185,6 @@ Follow these steps to set up the project locally:
   }
   ```
 
-
----
 
 ### 4. **Update Recipe**
 
@@ -227,8 +214,6 @@ Follow these steps to set up the project locally:
   ```
 
 
----
-
 ### 5. **Delete Recipe**
 
 * **Endpoint**: `DELETE /api/recipes/:recipeId`
@@ -252,8 +237,6 @@ Follow these steps to set up the project locally:
   ```
 
 
----
-
 ## Error Handling
 
 The API includes proper error handling for:
@@ -263,14 +246,10 @@ The API includes proper error handling for:
 * Database connection issues.
 
 
----
-
 ## Postman Documentation
 
 For detailed API documentation, including sample requests and responses, use Postman and import this file: [Recipe-API.postman_collection.json](./Recipe-API.postman_collection.json)
 
-
----
 
 ## Deployment
 
@@ -279,11 +258,10 @@ The application is deployed on **Render**. You can access it here:
 [Link to the deployed page](https://recipe-management-zzle.onrender.com/api/recipes/)
 
 
----
-
 ## Contributing
 
 Contributions are welcome! Please follow these steps:
+
 
 
 1. Fork the repository.
@@ -293,20 +271,14 @@ Contributions are welcome! Please follow these steps:
 5. Open a pull request.
 
 
----
-
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 
----
-
 ## Author
 
 [Tomislav Dukez](https://github.com/tomdu3)
 
-
----
 
 Feel free to modify this template to suit your project's specific details!
