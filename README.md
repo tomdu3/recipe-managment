@@ -40,8 +40,8 @@ Follow these steps to set up the project locally:
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/your-username/pes-app.git
-   cd pes-app
+   git clone https://github.com/tomdu3/recipe-managment.git
+   cd recipe-managment
    ```
 2. **Install dependencies**:
 
@@ -69,75 +69,117 @@ Follow these steps to set up the project locally:
 
 ## API Endpoints
 
-### 1. Create a Recipe
+### Base URL
 
-* **Endpoint**: `POST /api/recipes`
-* **Request Body**:
+* `API_URI`
+  * for local running: `http://localhost:3000`
+  * for deployed API: `https://recipe-management-zzle.onrender.com`
 
-  ```json
-  {
-    "name": "Pasta",
-    "ingredients": ["Pasta", "Tomato Sauce", "Cheese"],
-    "instructions": "Boil pasta, add sauce, and sprinkle cheese."
-  }
-  ```
-* **Response**:
+```
+{{API_URI}}/api/recipes
+```
 
-  ```json
-  {
-    "_id": "64f1b2c3e4b0a1a2b3c4d5e6",
-    "name": "Pasta",
-    "ingredients": ["Pasta", "Tomato Sauce", "Cheese"],
-    "instructions": "Boil pasta, add sauce, and sprinkle cheese.",
-    "createdAt": "2023-10-01T12:00:00.000Z",
-    "updatedAt": "2023-10-01T12:00:00.000Z"
-  }
-  ```
 
-### 2. Get All Recipes
+---
+
+### 1. **Get All Recipes**
 
 * **Endpoint**: `GET /api/recipes`
+* **Description**: Retrieves a list of all recipes.
+* **Request**: No request body required.
 * **Response**:
 
   ```json
   [
     {
-      "_id": "64f1b2c3e4b0a1a2b3c4d5e6",
-      "name": "Pasta",
-      "ingredients": ["Pasta", "Tomato Sauce", "Cheese"],
-      "instructions": "Boil pasta, add sauce, and sprinkle cheese.",
-      "createdAt": "2023-10-01T12:00:00.000Z",
-      "updatedAt": "2023-10-01T12:00:00.000Z"
-    }
+      "_id": "67d7ffa3bbb450b6da75ef75",
+      "name": "Spaghetti Carbonara",
+      "ingredients": [
+        "spaghetti",
+        "eggs",
+        "Parmesan cheese",
+        "bacon",
+        "garlic",
+        "black pepper",
+        "salt"
+      ],
+      "instructions": "Cook spaghetti according to package instructions. In a bowl, whisk eggs and Parmesan cheese. Cook bacon until crispy, then add minced garlic. Toss cooked spaghetti with the egg mixture and bacon. Season with black pepper and salt.",
+      "__v": 0,
+      "createdAt": "2025-03-17T10:55:31.484Z",
+      "updatedAt": "2025-03-17T10:55:31.484Z"
+    },
+    {
+      "_id": "67d7ffa3bbb450b6da75ef76",
+      "name": "Chicken Tikka Masala",
+      "ingredients": [
+        "chicken breast",
+        "yogurt",
+        "tomato puree",
+        "onion",
+        "garlic",
+        "ginger",
+        "garam masala",
+        "turmeric",
+        "cumin",
+        "coriander",
+        "cream",
+        "cilantro"
+      ],
+      "instructions": "Marinate chicken in yogurt and spices for 1 hour. Cook chicken in a pan until browned. Sauté onions, garlic, and ginger. Add tomato puree and spices, then simmer. Add chicken and cream. Garnish with cilantro.",
+      "__v": 0,
+      "createdAt": "2025-03-17T10:55:31.485Z",
+      "updatedAt": "2025-03-17T10:55:31.485Z"
+    },...
   ]
   ```
 
-### 3. Get Recipe by ID
 
-* **Endpoint**: `GET /api/recipes/:id`
+---
+
+### 2. **Get Recipe by ID**
+
+* **Endpoint**: `GET /api/recipes/:recipeId`
+* **Description**: Retrieves a specific recipe identified by the `recipeId`.
+* **Request**:
+  * `recipeId` (path parameter): The unique identifier of the recipe.
 * **Response**:
 
   ```json
   {
-    "_id": "64f1b2c3e4b0a1a2b3c4d5e6",
-    "name": "Pasta",
-    "ingredients": ["Pasta", "Tomato Sauce", "Cheese"],
-    "instructions": "Boil pasta, add sauce, and sprinkle cheese.",
-    "createdAt": "2023-10-01T12:00:00.000Z",
-    "updatedAt": "2023-10-01T12:00:00.000Z"
-  }
+      "_id": "67d7ffa3bbb450b6da75ef77",
+      "name": "Beef Tacos",
+      "ingredients": [
+        "ground beef",
+        "taco shells",
+        "lettuce",
+        "tomato",
+        "cheddar cheese",
+        "onion",
+        "taco seasoning",
+        "sour cream",
+        "salsa"
+      ],
+      "instructions": "Cook ground beef with taco seasoning. Warm taco shells. Fill shells with beef, lettuce, tomato, cheese, and onion. Top with sour cream and salsa.",
+      "__v": 0,
+      "createdAt": "2025-03-17T10:55:31.485Z",
+      "updatedAt": "2025-03-17T10:55:31.485Z"
+    }
   ```
 
-### 4. Update Recipe by ID
 
-* **Endpoint**: `PUT /api/recipes/:id`
+---
+
+### 3. **Create Recipe**
+
+* **Endpoint**: `POST /api/recipes`
+* **Description**: Adds a new recipe to the database.
 * **Request Body**:
 
   ```json
   {
-    "name": "Spicy Pasta",
-    "ingredients": ["Pasta", "Tomato Sauce", "Cheese", "Chili Flakes"],
-    "instructions": "Boil pasta, add sauce, sprinkle cheese, and add chili flakes."
+    "name": "Bruschetta",
+    "ingredients": ["baguette", "ripe tomatoes", "fresh basil", "garlic", "extra virgin olive oil", "balsamic vinegar", "salt", "black pepper"],
+    "instructions": "Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately."
   }
   ```
 * **Response**:
@@ -145,22 +187,67 @@ Follow these steps to set up the project locally:
   ```json
   {
     "_id": "64f1b2c3e4b0a1a2b3c4d5e6",
-    "name": "Spicy Pasta",
-    "ingredients": ["Pasta", "Tomato Sauce", "Cheese", "Chili Flakes"],
-    "instructions": "Boil pasta, add sauce, sprinkle cheese, and add chili flakes.",
+    "name": "Bruschetta",
+    "ingredients": ["baguette", "ripe tomatoes", "fresh basil", "garlic", "extra virgin olive oil", "balsamic vinegar", "salt", "black pepper"],
+    "instructions": "Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.",
     "createdAt": "2023-10-01T12:00:00.000Z",
-    "updatedAt": "2023-10-01T12:05:00.000Z"
+    "updatedAt": "2023-10-01T12:00:00.000Z",
+    "__v": 0
   }
   ```
 
-### 5. Delete Recipe by ID
 
-* **Endpoint**: `DELETE /api/recipes/:id`
+---
+
+### 4. **Update Recipe**
+
+* **Endpoint**: `PUT /api/recipes/:recipeId`
+* **Description**: Updates an existing recipe identified by the `recipeId`.
+* **Request Body**:
+
+  ```json
+  {
+    "name": "Updated Bruschetta",
+    "ingredients": ["baguette", "tomatoes", "basil", "garlic", "olive oil", "balsamic vinegar", "salt", "pepper"],
+    "instructions": "Updated instructions for Bruschetta."
+  }
+  ```
 * **Response**:
 
   ```json
   {
-    "message": "Recipe deleted successfully"
+    "_id": "64f1b2c3e4b0a1a2b3c4d5e6",
+    "name": "Updated Bruschetta",
+    "ingredients": ["baguette", "tomatoes", "basil", "garlic", "olive oil", "balsamic vinegar", "salt", "pepper"],
+    "instructions": "Updated instructions for Bruschetta.",
+    "createdAt": "2023-10-01T12:00:00.000Z",
+    "updatedAt": "2023-10-01T12:05:00.000Z",
+    "__v": 0
+  }
+  ```
+
+
+---
+
+### 5. **Delete Recipe**
+
+* **Endpoint**: `DELETE /api/recipes/:recipeId`
+* **Description**: Deletes a recipe identified by the `recipeId`.
+* **Request**: No request body required.
+* **Response**:
+
+  ```json
+  {
+    "message": "Recipe deleted successfully",
+    "recipe": {
+      "_id": "64f1b2c3e4b0a1a2b3c4d5e6",
+      "name": "Bruschetta",
+      "ingredients": ["baguette", "ripe tomatoes", "fresh basil", "garlic", "extra virgin olive oil", "balsamic vinegar", "salt", "black pepper"],
+      "instructions": "Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.",
+      "createdAt": "2023-10-01T12:00:00.000Z",
+      "updatedAt": "2023-10-01T12:00:00.000Z",
+      "__v": 0
+    }
   }
   ```
 
@@ -180,8 +267,7 @@ The API includes proper error handling for:
 
 ## Postman Documentation
 
-For detailed API documentation, including sample requests and responses, refer to the Postman collection:
-[Postman API Documentation](https://www.postman.com/)
+For detailed API documentation, including sample requests and responses, use Postman and import this file: [Recipe-API.postman_collection.json](./Recipe-API.postman_collection.json)
 
 
 ---
@@ -189,8 +275,8 @@ For detailed API documentation, including sample requests and responses, refer t
 ## Deployment
 
 The application is deployed on **Render**. You can access it here:
-<!-- TODO: add real link on deployment -->
-[CookItEasy Live Demo](https://cookiteasy-app.onrender.com)
+
+[Link to the deployed page](https://recipe-management-zzle.onrender.com/api/recipes/)
 
 
 ---
