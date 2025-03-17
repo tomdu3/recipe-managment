@@ -23,7 +23,30 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "GetAllRecipes",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/api/recipes/",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"api",
+								"recipes",
+								""
+							]
+						}
+					},
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": null
+				}
+			]
 		},
 		{
 			"name": "GetRecipeById",
@@ -31,19 +54,101 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886",
+					"raw": "{{API_URI}}/api/recipes/RecipeId",
 					"host": [
 						"{{API_URI}}"
 					],
 					"path": [
 						"api",
 						"recipes",
-						"67d8352bf82dd8d4532ac886"
+						"RecipeId"
 					]
 				},
 				"description": "### GET /api/recipes/{recipeId}\n\nThis endpoint retrieves a specific recipe identified by the recipeId.\n\n#### Request\n\nNo request body is required for this endpoint.\n\n- `recipeId` (path parameter) : The unique identifier of the recipe.\n    \n\n#### Response\n\nThe response will be a JSON object with the following properties:\n\n- `_id` : The unique identifier of the recipe.\n    \n- `name` : The name of the recipe.\n    \n- `ingredients` : An array of ingredients required for the recipe.\n    \n- `instructions` : The cooking instructions for the recipe.\n    \n- `createdAt` : The timestamp when the recipe was created.\n    \n- `updatedAt` : The timestamp when the recipe was last updated.\n    \n- `__v` : Version key for handling updates.\n    \n\nExample:\n\n``` json\n{\n  \"_id\": \"string\",\n  \"name\": \"string\",\n  \"ingredients\": [\"string\"],\n  \"instructions\": \"string\",\n  \"createdAt\": \"string\",\n  \"updatedAt\": \"string\",\n  \"__v\": 0\n}\n\n ```"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "GetRecipeById",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{API_URI}}/api/recipes/67d7ffa3bbb450b6da75ef75",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"api",
+								"recipes",
+								"67d7ffa3bbb450b6da75ef75"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 15:15:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "292"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"1e9-sQor7wb4FjvJhfoSf1Wn27+yZTs\""
+						},
+						{
+							"key": "rndr-id",
+							"value": "694f44a4-e226-42ef"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "921d71d42a3e2082-IAD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d7ffa3bbb450b6da75ef75\",\n    \"name\": \"Spaghetti Carbonara\",\n    \"ingredients\": [\n        \"spaghetti\",\n        \"eggs\",\n        \"Parmesan cheese\",\n        \"bacon\",\n        \"garlic\",\n        \"black pepper\",\n        \"salt\"\n    ],\n    \"instructions\": \"Cook spaghetti according to package instructions. In a bowl, whisk eggs and Parmesan cheese. Cook bacon until crispy, then add minced garlic. Toss cooked spaghetti with the egg mixture and bacon. Season with black pepper and salt.\",\n    \"__v\": 0,\n    \"createdAt\": \"2025-03-17T10:55:31.484Z\",\n    \"updatedAt\": \"2025-03-17T10:55:31.484Z\"\n}"
+				}
+			]
 		},
 		{
 			"name": "deleteRecipe",
@@ -51,14 +156,14 @@
 				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886",
+					"raw": "{{API_URI}}/api/recipes/RecipeId",
 					"host": [
 						"{{API_URI}}"
 					],
 					"path": [
 						"api",
 						"recipes",
-						"67d8352bf82dd8d4532ac886"
+						"RecipeId"
 					]
 				}
 			},
@@ -153,7 +258,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"name\": \"New recipe\"\n}",
+					"raw": "{\n    \"name\": \"New name\",\n    \"ingrediens\": [\"new\", \"igredients\"],\n    \"instructions\": \"New instructions\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -161,18 +266,109 @@
 					}
 				},
 				"url": {
-					"raw": "{{API_URI}}/api/recipes/67d7ffa3bbb450b6da75ef7d",
+					"raw": "{{API_URI}}/api/recipes/RecipeId",
 					"host": [
 						"{{API_URI}}"
 					],
 					"path": [
 						"api",
 						"recipes",
-						"67d7ffa3bbb450b6da75ef7d"
+						"RecipeId"
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "updateRecipe",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New recipe\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URI}}/api/recipes/67d7ffa3bbb450b6da75ef7d",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"api",
+								"recipes",
+								"67d7ffa3bbb450b6da75ef7d"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 15:19:15 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "287"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"1b5-iZeMRWR+1dtDB34BpxthPTH2NJE\""
+						},
+						{
+							"key": "rndr-id",
+							"value": "11b625f0-194a-4c56"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "921d77b15867c95f-IAD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"_id\": \"67d7ffa3bbb450b6da75ef7d\",\n    \"name\": \"New recipe\",\n    \"ingredients\": [\n        \"ground beef\",\n        \"burger buns\",\n        \"lettuce\",\n        \"tomato\",\n        \"onion\",\n        \"cheese\",\n        \"ketchup\",\n        \"mustard\",\n        \"pickles\"\n    ],\n    \"instructions\": \"Form ground beef into patties. Grill or fry patties until cooked. Toast burger buns. Assemble burgers with lettuce, tomato, onion, cheese, ketchup, mustard, and pickles.\",\n    \"__v\": 0,\n    \"createdAt\": \"2025-03-17T10:55:31.485Z\",\n    \"updatedAt\": \"2025-03-17T15:19:15.661Z\"\n}"
+				}
+			]
 		},
 		{
 			"name": "CreateRecipe",
@@ -181,7 +377,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n  \"name\": \"Bruschetta\",\n  \"ingredients\": [\n    \"baguette\",\n    \"ripe tomatoes\",\n    \"fresh basil\",\n    \"garlic\",\n    \"extra virgin olive oil\",\n    \"balsamic vinegar\",\n    \"salt\",\n    \"black pepper\"\n  ],\n  \"instructions\": \"Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.\"\n}",
+					"raw": "{\n  \"name\": \"name\",\n  \"ingredients\": [\n    \"list\",\n    \"of\",\n    \"ingredients\"\n  ],\n  \"instructions\": \"Instructions.\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -200,7 +396,98 @@
 					]
 				}
 			},
-			"response": []
+			"response": [
+				{
+					"name": "CreateRecipe",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"name\": \"Bruschetta\",\n  \"ingredients\": [\n    \"baguette\",\n    \"ripe tomatoes\",\n    \"fresh basil\",\n    \"garlic\",\n    \"extra virgin olive oil\",\n    \"balsamic vinegar\",\n    \"salt\",\n    \"black pepper\"\n  ],\n  \"instructions\": \"Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{API_URI}}/api/recipes/",
+							"host": [
+								"{{API_URI}}"
+							],
+							"path": [
+								"api",
+								"recipes",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 15:17:03 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "409"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2b1-A0HWG3U1pZhXOla0ktSCFbVHiAs\""
+						},
+						{
+							"key": "rndr-id",
+							"value": "86819f37-78d3-4b22"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "921d74773aec0aa1-IAD"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recipe created successfully\",\n    \"recipe\": {\n        \"name\": \"Bruschetta\",\n        \"ingredients\": [\n            \"baguette\",\n            \"ripe tomatoes\",\n            \"fresh basil\",\n            \"garlic\",\n            \"extra virgin olive oil\",\n            \"balsamic vinegar\",\n            \"salt\",\n            \"black pepper\"\n        ],\n        \"instructions\": \"Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.\",\n        \"_id\": \"67d83cefcb5ca354e29e6f10\",\n        \"createdAt\": \"2025-03-17T15:17:03.347Z\",\n        \"updatedAt\": \"2025-03-17T15:17:03.347Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
 		}
 	]
 }
