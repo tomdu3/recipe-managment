@@ -1,4 +1,4 @@
-# CookItEasy - Recipe Management System
+# Recipe Management System API
 
  ![Node.js](https://img.shields.io/badge/Node.js-18.x-green)
  ![Express.js](https://img.shields.io/badge/Express.js-4.x-blue)
@@ -6,7 +6,7 @@
  ![MongoDB](https://img.shields.io/badge/MongoDB-6.x-brightgreen)
  ![Postman](https://img.shields.io/badge/Postman-API%20Documentation-orange)
 
-CookItEasy is a **CRUD (Create, Read, Update, Delete)** application designed to manage recipes. It is built using **Node.js**, **Express.js**, and **Mongoose** for MongoDB integration. The application follows the **MVC (Model-View-Controller)** pattern and includes comprehensive API documentation using **Postman**.
+This is a **CRUD (Create, Read, Update, Delete)** application designed to manage recipes. It is built using **Node.js**, **Express.js**, and **Mongoose** for MongoDB integration. The application follows the **MVC (Model-View-Controller)** pattern and includes comprehensive API documentation using **Postman**.
 
  ![Postman request API screenshot](./docs/postman-api.png)
 
@@ -66,7 +66,7 @@ Follow these steps to set up the project locally:
 
 ### Base URL
 
-* `API_URI`
+* `API_URI` variable:
   * for local running: `http://localhost:3000`
   * for deployed API: `https://recipe-management-zzle.onrender.com`
 
@@ -258,19 +258,6 @@ For detailed API documentation, including sample requests and responses, use Pos
 The application is deployed on **Render**. You can access it here:
 
 [Link to the deployed page](https://recipe-management-zzle.onrender.com/api/recipes/)
-
-
-## Contributing
-
-Contributions are welcome! Please follow these steps:
-
-
-
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature/YourFeatureName`).
-3. Commit your changes (`git commit -m 'Add some feature'`).
-4. Push to the branch (`git push origin feature/YourFeatureName`).
-5. Open a pull request.
 
 
 ## License
