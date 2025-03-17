@@ -34,7 +34,21 @@ const getRecipeById = async (req, res) => {
     }
 };
 
+// Create a new recipe
+const createRecipe = async (req, res) => {
+    try {
+      const { name, ingredients, instructions } = req.body;
+      const recipe = new Recipe({ name, ingredients, instructions });
+      await recipe.save();
+      res.status(201).json(...recipe, { message: 'Recipe created successfully' });
+    } catch (error) {
+      res.status(400).json({ message: error.message });
+    }
+  };
+  
+
 module.exports = {
     getAllRecipes,
     getRecipeById,
+    createRecipe
 };
