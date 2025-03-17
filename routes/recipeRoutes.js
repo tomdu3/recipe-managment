@@ -1,10 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const {
+    getAllRecipes
+} = require('../controllers/recipeController');
+
 
 // CRUD Routes
-router.get('/', (req, res) => {
-    res.send('Get all recipes');
-    }
-);
+router.get('/', getAllRecipes);
 
 module.exports = router;
