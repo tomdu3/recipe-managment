@@ -1,0 +1,52 @@
+[
+    {
+      "name": "Spaghetti Carbonara",
+      "ingredients": ["spaghetti", "eggs", "Parmesan cheese", "bacon", "garlic", "black pepper", "salt"],
+      "instructions": "Cook spaghetti according to package instructions. In a bowl, whisk eggs and Parmesan cheese. Cook bacon until crispy, then add minced garlic. Toss cooked spaghetti with the egg mixture and bacon. Season with black pepper and salt."
+    },
+    {
+      "name": "Chicken Tikka Masala",
+      "ingredients": ["chicken breast", "yogurt", "tomato puree", "onion", "garlic", "ginger", "garam masala", "turmeric", "cumin", "coriander", "cream", "cilantro"],
+      "instructions": "Marinate chicken in yogurt and spices for 1 hour. Cook chicken in a pan until browned. Sauté onions, garlic, and ginger. Add tomato puree and spices, then simmer. Add chicken and cream. Garnish with cilantro."
+    },
+    {
+      "name": "Beef Tacos",
+      "ingredients": ["ground beef", "taco shells", "lettuce", "tomato", "cheddar cheese", "onion", "taco seasoning", "sour cream", "salsa"],
+      "instructions": "Cook ground beef with taco seasoning. Warm taco shells. Fill shells with beef, lettuce, tomato, cheese, and onion. Top with sour cream and salsa."
+    },
+    {
+      "name": "Vegetable Stir-Fry",
+      "ingredients": ["broccoli", "carrots", "bell peppers", "snap peas", "soy sauce", "garlic", "ginger", "sesame oil", "rice"],
+      "instructions": "Cook rice according to package instructions. Heat sesame oil in a pan. Sauté garlic and ginger. Add vegetables and stir-fry until tender. Add soy sauce. Serve over rice."
+    },
+    {
+      "name": "Chocolate Chip Cookies",
+      "ingredients": ["flour", "butter", "sugar", "brown sugar", "eggs", "vanilla extract", "baking soda", "salt", "chocolate chips"],
+      "instructions": "Preheat oven to 375°F (190°C). Cream butter and sugars. Add eggs and vanilla. Mix in dry ingredients. Fold in chocolate chips. Drop spoonfuls onto a baking sheet. Bake for 10-12 minutes."
+    },
+    {
+      "name": "Grilled Salmon",
+      "ingredients": ["salmon fillets", "olive oil", "lemon", "garlic", "dill", "salt", "pepper"],
+      "instructions": "Preheat grill. Brush salmon with olive oil. Season with garlic, dill, salt, and pepper. Grill for 4-5 minutes per side. Squeeze lemon juice over the top before serving."
+    },
+    {
+      "name": "Vegetable Lasagna",
+      "ingredients": ["lasagna noodles", "ricotta cheese", "mozzarella cheese", "tomato sauce", "spinach", "zucchini", "mushrooms", "onion", "garlic"],
+      "instructions": "Cook lasagna noodles. Sauté vegetables with garlic and onion. Layer noodles, ricotta, vegetables, and tomato sauce in a baking dish. Top with mozzarella. Bake at 375°F (190°C) for 30 minutes."
+    },
+    {
+      "name": "Pancakes",
+      "ingredients": ["flour", "milk", "eggs", "sugar", "baking powder", "salt", "butter", "maple syrup"],
+      "instructions": "Mix dry ingredients in a bowl. Add milk and eggs, then whisk until smooth. Heat a pan with butter. Pour batter onto the pan. Cook until bubbles form, then flip. Serve with maple syrup."
+    },
+    {
+      "name": "Beef Burger",
+      "ingredients": ["ground beef", "burger buns", "lettuce", "tomato", "onion", "cheese", "ketchup", "mustard", "pickles"],
+      "instructions": "Form ground beef into patties. Grill or fry patties until cooked. Toast burger buns. Assemble burgers with lettuce, tomato, onion, cheese, ketchup, mustard, and pickles."
+    },
+    {
+      "name": "Caesar Salad",
+      "ingredients": ["romaine lettuce", "croutons", "Parmesan cheese", "chicken breast", "Caesar dressing", "lemon", "black pepper"],
+      "instructions": "Grill or cook chicken breast. Chop romaine lettuce. Toss lettuce with croutons, Parmesan, and Caesar dressing. Slice chicken and place on top. Squeeze lemon juice and sprinkle black pepper."
+    }
+  ]
