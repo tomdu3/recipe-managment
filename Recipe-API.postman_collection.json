@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "2c26bbc4-5b93-479c-9ce5-2830281efd19",
+		"name": "Recipe-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "15625728"
+	},
+	"item": [
+		{
+			"name": "GetAllRecipes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{API_URI}}/api/recipes/"
+			},
+			"response": []
+		},
+		{
+			"name": "GetRecipeById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "{{API_URI}}/api/recipes/67d7ffa3bbb450b6da75ef75"
+			},
+			"response": []
+		},
+		{
+			"name": "deleteRecipe",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886"
+			},
+			"response": [
+				{
+					"name": "deleteRecipe",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{API_URI}}/api/recipes/67d834bbf82dd8d4532ac881"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Mon, 17 Mar 2025 14:43:26 GMT"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "418"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Content-Encoding",
+							"value": "br"
+						},
+						{
+							"key": "etag",
+							"value": "W/\"2b1-vClx/7cLvN6TiXinstthHF/Vsnc\""
+						},
+						{
+							"key": "rndr-id",
+							"value": "fdee9b21-3f68-4e30"
+						},
+						{
+							"key": "vary",
+							"value": "Accept-Encoding"
+						},
+						{
+							"key": "x-powered-by",
+							"value": "Express"
+						},
+						{
+							"key": "x-render-origin-server",
+							"value": "Render"
+						},
+						{
+							"key": "cf-cache-status",
+							"value": "DYNAMIC"
+						},
+						{
+							"key": "Server",
+							"value": "cloudflare"
+						},
+						{
+							"key": "CF-RAY",
+							"value": "921d433c7e0a3dae-LHR"
+						},
+						{
+							"key": "alt-svc",
+							"value": "h3=\":443\"; ma=86400"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"message\": \"Recipe deleted successfully\",\n    \"recipe\": {\n        \"_id\": \"67d834bbf82dd8d4532ac881\",\n        \"name\": \"New recipe\",\n        \"ingredients\": [\n            \"baguette\",\n            \"ripe tomatoes\",\n            \"fresh basil\",\n            \"garlic\",\n            \"extra virgin olive oil\",\n            \"balsamic vinegar\",\n            \"salt\",\n            \"black pepper\"\n        ],\n        \"instructions\": \"Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.\",\n        \"createdAt\": \"2025-03-17T14:42:03.046Z\",\n        \"updatedAt\": \"2025-03-17T14:43:14.228Z\",\n        \"__v\": 0\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "updateRecipe",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New recipe\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{API_URI}}/api/recipes/67d8352bf82dd8d4532ac886"
+			},
+			"response": []
+		},
+		{
+			"name": "CreateRecipe",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Bruschetta\",\n  \"ingredients\": [\n    \"baguette\",\n    \"ripe tomatoes\",\n    \"fresh basil\",\n    \"garlic\",\n    \"extra virgin olive oil\",\n    \"balsamic vinegar\",\n    \"salt\",\n    \"black pepper\"\n  ],\n  \"instructions\": \"Slice the baguette into 1-inch thick pieces. Toast the slices until golden brown. Dice the tomatoes and finely chop the basil. Mince the garlic. In a bowl, mix tomatoes, basil, garlic, a drizzle of olive oil, and a splash of balsamic vinegar. Season with salt and black pepper. Spoon the mixture onto the toasted baguette slices. Serve immediately.\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "{{API_URI}}/api/recipes/"
+			},
+			"response": []
+		}
+	]
+}
